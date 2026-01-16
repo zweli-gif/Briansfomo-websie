@@ -1,0 +1,8 @@
+{
+  "name": "Briansfomo - Intimate Gatherings",
+  "description": "A community-focused platform for hosting and discovering intimate social gatherings in South Africa, built on the spirit of Ubuntu.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}
