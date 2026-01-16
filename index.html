@@ -1,62 +1,353 @@
+Skip to main content
+Briansfomo - Intimate Gatherings
+Code assistant
+User
+Build me a clickable prototype of this web app. Make it mobile web responsive
+Image 1.png
+Image 1.png
+Image 2.html
+Image 3.png
+Image 3.png
+Image 4.html
+Image 5.png
+Image 5.png
+Image 6.html
+Briansfomo_Curator_Presentation.pdf
+Briansfomo_Operations_Manual_Detailed_v1.1.pdf
+Gemini 3 Flash Preview
+Ran for 73s
+lightbulb
+Thought for 15 seconds
+metadata.json
+check_circle
+index.html
+check_circle
+index.tsx
+check_circle
+types.ts
+check_circle
+constants.tsx
+check_circle
+components/Header.tsx
+check_circle
+pages/Home.tsx
+check_circle
+pages/Explore.tsx
+check_circle
+pages/CreateGathering.tsx
+check_circle
+App.tsx
+check_circle
+Analyzed errors for 7 seconds
+lightbulb
+Thought for 4 seconds
+pages/Explore.tsx
+check_circle
+User
+I have given you a detailed spec for the MVP. Now please update the prototype with this new context.
+Briansfomo_MVP_Functional_Spec.pdf
+Gemini 3 Flash Preview
+Ran for 20s
+lightbulb
+Thought for 19 seconds
+types.ts
+check_circle
+constants.tsx
+check_circle
+components/Header.tsx
+check_circle
+pages/Home.tsx
+check_circle
+pages/EventDetail.tsx
+check_circle
+pages/SafeExit.tsx
+check_circle
+App.tsx
+check_circle
+User
+When I go to browse events, I already want to see the various event categories i.e.,
+come sit with us (description: events involving sitting around a table and eating)
+come connect with us (events involving activities or talks e.g., yoga sessions, lectures, walks etc., )(
+come party with us (event related gatherings, club hopping, mgidi invites)
+Let's start with these and ofcourse improve on the copy for descriptions. Now all valentines events will go under sit with us, the other sections will be empty so add a message saying "there are no events in this category yet"
+For the curator journey, already add an application form which must go to admin to approve and only then can they create an event
+Gemini 3 Flash Preview
+Ran for 19s
+lightbulb
+Thought for 14 seconds
+I will now update the Briansfomo prototype to reflect the new event categories, the empty category states, and the multi-step curator application and approval journey.
+Specification Updates:
+Event Categories:
+Come sit with us: "Shared meals and deep conversations around a communal table." (Includes all Valentine's events).
+Come connect with us: "Movement, learning, and shared growth through activities like yoga, walks, and talks."
+Come party with us: "Celebrations, music, and the vibrant pulse of our community—from mgidi invites to club hopping."
+Explore View: Redesigned to show these three distinct sections with their descriptions. If a section is empty, a welcoming "no events yet" message is displayed.
+Curator Journey:
+Added a detailed Curator Application Form (URL: /apply).
+Added a Pending Application state with the specified "review within 48 hours" messaging.
+Added an Admin Dashboard (URL: /admin) to simulate the operator workflow (approving/rejecting curators).
+Only Approved Curators can access the "Create Gathering" functionality.
+Visuals: Continued use of the "African-inspired" palette (Terracotta/Sage/Navy) with high-quality imagery and warm, Ubuntu-centric copy.
+types.ts
+check_circle
+constants.tsx
+check_circle
+pages/CuratorApplication.tsx
+check_circle
+pages/AdminDashboard.tsx
+check_circle
+App.tsx
+check_circle
+User
+The home page pic is full of white people, please replace with a similar one but with black people
+Gemini 3 Flash Preview
+Ran for 31s
+lightbulb
+Thought for 26 seconds
+I will update the prototype to include the specific category layout you requested, refine the descriptions, and update the hero imagery to better reflect the South African context.
+Specification Updates:
+Hero Image Update: Replaced the landing page hero image with high-quality photography featuring Black friends sharing a meal and conversation, aligning with the Ubuntu spirit.
+Explore Page Redesign:
+Come sit with us: "Shared meals and deep conversations around a communal table." (Contains existing events).
+Come connect with us: "Movement, learning, and shared growth through activities like yoga, walks, and talks." (Shows empty state).
+Come party with us: "Celebrations, music, and the vibrant pulse of our community—from mgidi invites to club hopping." (Shows empty state).
+Curator Workflow: Ensured the application form leads to a pending state, with the Admin Dashboard as the mechanism for approval.
+Visual Improvements: Enhanced category headers with distinct iconography and clear descriptions.
+constants.tsx
+check_circle
+pages/Home.tsx
+check_circle
+pages/Explore.tsx
+check_circle
+App.tsx
+check_circle
+User
+Under how it works, I see you have a row for mntases and a row for curators, I am happy with mntase. For curators let's have:L
+Easy to start, no need for expensive resources like cars
+Your security protecte, all guests are by referal or have been vetted by us
+Just bring a vibe and ubuntu, the more mntase's rate your vibe, the more other mntases will come
+earn, our belief is that you should make money from each event and we provide tools to ensure this
+Gemini 3 Flash Preview
+Ran for 46s
+lightbulb
+Thought for 32 seconds
+pages/Home.tsx
+check_circle
+User
+Make the home page hero message "Our mission is to end loneliness"
+Gemini 3 Flash Preview
+Ran for 49s
+lightbulb
+Thought for 35 seconds
+pages/Home.tsx
+check_circle
+User
+Let's end reference to homes as not all events will be in homes
+Gemini 3 Flash Preview
+Ran for 22s
+lightbulb
+Thought for 8 seconds
+pages/Home.tsx
+check_circle
+pages/Explore.tsx
+check_circle
+User
+We also need a call to action from Mntases to apply to join the movement to end loneliness. There have them enter the name and phone number of the person that vouches for them, or to submit application and wait for a call from an existing mntase.
+Let's remove reference to Johannesburg. This will be global and I want to open with that from day one.
+In the MVP we wont have user profiles, but we need a way for each use to give a one sentence intros as well as their vibe prefererences. I don't know how to achieve this - give it your best shot
+Gemini 3 Flash Preview
+Ran for 14s
+lightbulb
+Thought for 10 seconds
+To satisfy your request, I will update the application to remove specific geographic constraints (making it feel global), add the "Mntase Join Movement" workflow, and implement a "Profile-Lite" system that captures a one-sentence intro and vibe preferences without requiring a full account system.
+Specification:
+Global Positioning: Removed all mentions of "Johannesburg" in favor of "cities and spaces worldwide" to reflect the global vision from day one.
+Mntase Joining Flow:
+Added a new "Join the Movement" section on the Home page.
+Created a MntaseApplication page where guests can choose between providing a referral (Name + Phone) or requesting a vetting call from an existing community member.
+Profile-Lite Integration:
+Implemented a state-driven "Mini Profile" in App.tsx.
+Added a Onboarding step that triggers before booking if the user hasn't set their "one-sentence intro" and "vibe preferences" (using the existing VIBE_PILLS).
+The intro and vibes are passed to the curator when applying for an event.
+Visual Appearance: Maintained the "Ubuntu" aesthetic but introduced a new "Join Movement" card with a warm, inviting feel. The onboarding flow uses a step-based mini-form to keep it lightweight.
+types.ts
+check_circle
+pages/Home.tsx
+check_circle
+pages/MntaseApplication.tsx
+check_circle
+pages/Onboarding.tsx
+check_circle
+App.tsx
+check_circle
+pages/EventDetail.tsx
+check_circle
+pages/Explore.tsx
+check_circle
+pages/CreateGathering.tsx
+check_circle
+components/Header.tsx
+check_circle
+User
+For the hero message let's go with Curated gatherings anywhere.
+The join the movement CTA tablet for cuators is confusing - revert back to become a curator.
+Drop the section with no car needed, no property etc,
+Drop curatopr program section
+Gemini 3 Flash Preview
+Ran for 29s
+lightbulb
+Thought for 16 seconds
+pages/Home.tsx
+check_circle
+User
+I think we need more customer education on the home page. What is Brian's Fomo about. What is our value proposition? Why we are more secure? etc.,
+Gemini 3 Flash Preview
+Ran for 31s
+lightbulb
+Thought for 9 seconds
+To make the platform more approachable and build trust, I'll add several educational sections to the home page. These will explain the Ubuntu philosophy, the Security/Vetting process, and the Safe Exit Protocol, which are the unique value propositions of Briansfomo.
+Specification:
+"The Philosophy" Section: A high-impact text block explaining that Briansfomo isn't just an event app, but a movement to rebuild community using the spirit of Ubuntu ("I am because we are").
+"The Three Pillars" Section: A visual grid highlighting the core value props:
+Intimacy Over Crowds: Small, manageable groups (4-12) for real talk.
+Vetted for Peace: No public access; every member is vouched for or interviewed.
+Sovereignty: Education about the "Safe Exit Protocol" as a standard for psychological safety.
+"Our Security Model" Section: Detailed breakdown of why we are safer than public social platforms (Private locations, verified profiles, referral-only access).
+Visual Updates: Use a clean, magazine-style layout with large typography and warm iconography to make the education feel like a story rather than a manual.
+pages/Home.tsx
+check_circle
+User
+Let's move the curator and mntase joinining journeis from the home page to the joinment tab, and there we have a menu for become a mntase or become a curator
+Gemini 3 Flash Preview
+Ran for 13s
+lightbulb
+Thought for 11 seconds
+types.ts
+check_circle
+pages/Home.tsx
+check_circle
+pages/JoinMovementHub.tsx
+check_circle
+App.tsx
+check_circle
+components/Header.tsx
+check_circle
+User
+We need to separete event categories in a drop down menu and and each has it's space
+Gemini 3 Flash Preview
+Ran for 30s
+lightbulb
+Thought for 28 seconds
+types.ts
+check_circle
+components/Header.tsx
+check_circle
+pages/Explore.tsx
+check_circle
+App.tsx
+check_circle
+User
+Now I want to share a link of the clickable prototype with friends. Are you able to create a sharing link for me
+Gemini 3 Flash Preview
+Ran for 30s
+lightbulb
+Thought for 17 seconds
+I cannot generate a unique public URL myself, as I am an AI providing the code for your environment. However, the link in your browser's address bar is the one you can share!
+To make it even easier for your friends to interact with the prototype, I've added a "Share Prototype" button to the header. This uses the native mobile sharing menu (if they are on a phone) or copies the link to their clipboard on a desktop.
+components/Header.tsx
+check_circle
+User
+I want to copy the code to my github, where I will then create the prototype. How do I copy the code
+Gemini 3 Flash Preview
+Ran for 11s
+lightbulb
+Thought for 11 seconds
+To copy this code to your GitHub and create a functional prototype, follow these steps:
+1. Create a Local Folder
+On your computer, create a new folder for your project (e.g., briansfomo-prototype).
+2. Create the Project Files
+Inside that folder, create the following files and copy the content from the code blocks I provided into each one. Ensure the file names and folder structures match exactly:
+index.html (The entry point)
+index.tsx (The React mount point)
+App.tsx (The main application logic)
+types.ts (TypeScript interfaces)
+constants.tsx (The data for your events and categories)
+metadata.json (Configuration for permissions)
+Folder components/: Create a file named Header.tsx inside it.
+Folder pages/: Create the following files inside it:
+Home.tsx
+Explore.tsx
+EventDetail.tsx
+SafeExit.tsx
+CreateGathering.tsx
+CuratorApplication.tsx
+AdminDashboard.tsx
+MntaseApplication.tsx
+Onboarding.tsx
+JoinMovementHub.tsx
+3. How to Run It Locally
+Because this app uses an importmap and ESM modules (fetching React directly from esm.sh), you don't actually need to run npm install or npm start to see it work. You just need a simple local web server:
+If you use VS Code, install the "Live Server" extension.
+Right-click index.html and select "Open with Live Server".
+The prototype will open in your browser.
+4. Push to GitHub
+Go to GitHub and create a new repository.
+In your local folder, run:
+code
+Bash
+git init
+git add .
+git commit -m "Initial prototype"
+git remote add origin [YOUR_GITHUB_REPO_URL]
+git push -u origin main
+5. Create the Shareable Prototype (GitHub Pages)
+Since this app runs purely in the browser without a build step:
+Go to your GitHub repository Settings.
+Click on Pages in the left sidebar.
+Under Build and deployment, set the source to Deploy from a branch and select main.
+After a minute, GitHub will give you a public URL (e.g., https://username.github.io/repo-name/) that you can share with your friends!
+Note: Since the app uses relative paths, ensure that when you move to GitHub Pages, the browser can find the files (GitHub Pages works best if the index.html is in the root).
+lightbulb_tips
+Suggestions
+Make changes, add new features, ask for anything
+segment
+App.tsx
+folder
+components
+segment
+Header.tsx
+segment
+constants.tsx
+code
+index.html
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Briansfomo</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#e76b55',
-                        navy: '#1a2a3a',
-                        gold: '#d4af37',
-                        sage: '#8a9a5b',
-                        background: '#f8f6f6',
-                        card: '#ffffff'
-                    },
-                    fontFamily: {
-                        sans: ['Be Vietnam Pro', 'sans-serif'],
-                    },
-                    borderRadius: {
-                        'xl': '1rem',
-                        '2xl': '1.5rem',
-                        '3xl': '2rem',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            background-image: radial-gradient(#e5dddc 0.5px, transparent 0.5px);
-            background-size: 20px 20px;
-        }
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-    </style>
-<script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
-  }
-}
-</script>
-</head>
-<body class="bg-background text-navy font-sans antialiased">
-    <div id="root"></div>
-</body>
-</html>
+more_vert
+segment
+index.tsx
+data_object
+metadata.json
+folder
+pages
+segment
+AdminDashboard.tsx
+segment
+CreateGathering.tsx
+segment
+CuratorApplication.tsx
+segment
+EventDetail.tsx
+segment
+Explore.tsx
+segment
+Home.tsx
+segment
+JoinMovementHub.tsx
+segment
+MntaseApplication.tsx
+segment
+Onboarding.tsx
+segment
+SafeExit.tsx
+segment
+types.ts
+1234567891011121314151617181920212223242526272829303132
